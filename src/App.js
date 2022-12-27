@@ -7,7 +7,7 @@ function App() {
   const [text, setText] = useState();
   const [textState, setTextState] = useState();
   useEffect(() => {
-    // if ('OTPCredential' in window) {
+    if ('OTPCredential' in window) {
       const ac = new AbortController();
       setTextState('INit');
       navigator.credentials.get({
@@ -21,7 +21,7 @@ function App() {
       }).catch((err) => {
         console.error(err);
       });
-    // }
+    }
   }, []);
   return (
     <div className="App">
