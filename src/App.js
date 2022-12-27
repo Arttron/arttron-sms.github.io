@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     if ('OTPCredential' in window) {
       const ac = new AbortController();
-      setTextState('INit');
+      setTextState('Init');
       navigator.credentials.get({
         otp: { transport:['sms'] },
         signal: ac.signal
